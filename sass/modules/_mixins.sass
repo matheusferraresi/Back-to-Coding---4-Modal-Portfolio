@@ -1,0 +1,10 @@
+=container($width: 90%, $max-width: 55rem)
+    width: $width
+    margin: 0 auto
+    max-width: $max-width
+
+=clearfix
+    &::after
+        content: ''
+        display: block
+        clear: both
