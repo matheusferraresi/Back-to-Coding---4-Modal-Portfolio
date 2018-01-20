@@ -9,6 +9,29 @@ form
     display: flex
     flex-direction: column
 
+    @supports (display: grid)
+        @include mq
+            display: grid
+            grid-column: 1fr 1fr
+            grid-column-gap: 1em
+            grid-template-areas: "name    email" "message message" ".       button"
+
+            .name
+                grid-area: name
+
+            .email
+                grid-area: email
+
+            .message
+                grid-area: message
+                textarea
+                    height: 10em
+                    resize: vertical
+
+
+            .button
+                grid-area: button
+
 label
     margin-top: 1em
     color: $dark-grey
