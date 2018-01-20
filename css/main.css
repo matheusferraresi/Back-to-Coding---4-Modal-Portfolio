@@ -700,6 +700,115 @@ nav a {
   .featured .portfolio-title {
     font-size: 5rem; } }
 
+.portfolio-modal {
+  position: fixed;
+  z-index: 10;
+  top: 1.5em;
+  bottom: 1.5em;
+  left: 1.5em;
+  right: 1.5em;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 0 3em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 3em rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none; }
+  .portfolio-modal.is-open {
+    display: block; }
+
+.modal-close {
+  background: #FFFFFF;
+  position: fixed;
+  left: 1em;
+  top: 1em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  padding: 5px 0 0;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  outline: none; }
+
+.portfolio-header {
+  text-align: left;
+  padding: 5em 0;
+  margin-bottom: 1.5em;
+  background-size: cover;
+  background-position: center; }
+
+.header-one {
+  background-image: url(../img/portfolio-01.jpg); }
+
+.header-two {
+  background-image: url(../img/portfolio-02.jpg); }
+
+.portfolio-title-box {
+  background: rgba(3, 175, 194, 0.75);
+  padding: 3em;
+  color: #FFFFFF;
+  width: 60%; }
+  .portfolio-title-box .portfolio-title {
+    font-size: 3.5rem;
+    display: inline-block; }
+    .portfolio-title-box .portfolio-title::after {
+      content: '';
+      display: block;
+      height: 1px;
+      margin: .5em 0;
+      background: #FFFFFF;
+      width: 100%; }
+  .portfolio-title-box .portfolio-subtitle {
+    font-size: 1rem; }
+
+.portfolio-content {
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 1.8em; }
+
+.portfolio-full-width {
+  width: 100vw !important;
+  max-width: initial;
+  margin: 2em calc(50% - 50vw);
+  height: 20vh;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+@media (min-width: 50em) {
+  .portfolio-pull-left, .portfolio-pull-right {
+    width: 65% !important;
+    margin: 1.5em; }
+  .portfolio-pull-left {
+    float: left; }
+  .portfolio-pull-right {
+    float: right; } }
+
+@-webkit-keyframes modalIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes modalIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes modalOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes modalOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .contact {
   width: 90%;
   margin: 0 auto;
