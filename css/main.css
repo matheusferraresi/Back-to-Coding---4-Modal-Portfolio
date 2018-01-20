@@ -690,8 +690,10 @@ nav a {
 @supports (display: grid) {
   .portfolio-items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(4, 1fr); }
+    grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 50em) {
+      .portfolio-items {
+        grid-template-columns: repeat(4, 1fr); } }
   .portfolio-item.featured {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2; }
