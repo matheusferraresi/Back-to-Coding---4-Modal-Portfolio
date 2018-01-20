@@ -379,6 +379,95 @@ h2 {
     h2 {
       font-size: 2.5rem; } }
 
+.menu-button {
+  position: absolute;
+  top: 1.5em;
+  left: 1.4em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none; }
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 20%;
+  z-index: 10;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform ease-out 250ms;
+  transition: -webkit-transform ease-out 250ms;
+  -o-transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: #03AFC2; }
+
+nav li {
+  text-align: center; }
+  nav li:not(:last-of-type) {
+    border-bottom: 1px solid #223843; }
+
+nav li:hover, nav li:focus {
+  background: rgba(34, 56, 67, 0.5); }
+
+nav a {
+  font-size: 3rem;
+  letter-spacing: 0.3em;
+  color: #223843;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  padding: calc(100vh/8) 0;
+  line-height: 0;
+  width: 100%; }
+
+.close-icon {
+  display: none; }
+
+.nav-is-open {
+  height: 100vh;
+  overflow: hidden; }
+  .nav-is-open nav {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  .nav-is-open .container-all {
+    -webkit-transform: translateX(80%);
+    -ms-transform: translateX(80%);
+    transform: translateX(80%); }
+  .nav-is-open .hamburger {
+    display: none; }
+  .nav-is-open .close-icon {
+    display: block; }
+  .nav-is-open .menu-button {
+    -webkit-transform: translateX(-30%);
+    -ms-transform: translateX(-30%);
+    transform: translateX(-30%); }
+
 .welcome {
   background-image: url(../img/header-bg.png);
   background-size: cover;
@@ -392,7 +481,8 @@ h2 {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   .welcome h1 {
     font-size: 1.5rem;
     font-weight: 400;
